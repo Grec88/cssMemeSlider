@@ -541,6 +541,7 @@ body {
 
 .slider__info{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   font-size: 2.4rem;
@@ -579,6 +580,18 @@ body {
 .slider__control:active{
   outline: none;
   background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+  
+  .slider__info{
+    flex-direction: column-reverse;
+    row-gap: 20px;
+  }
+
+  .slider__description{
+    align-self: flex-start;
+  }
 }
 
 
