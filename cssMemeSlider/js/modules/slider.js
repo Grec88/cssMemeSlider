@@ -1,15 +1,12 @@
 import { memeInfo } from "../../assets/data/memeInfo.js";
 
 export const slider = () => {
-  console.log(1)
   const cards = document.querySelector('.slider__cards');
   const buttons = document.querySelectorAll('.slider__control');
   const cardsDescription = document.querySelector('.slider__description');
   let currentCard = 0;
 
   const changeSliderDesc = (currentCard) => {
-
-    console.log('asdfs')
 
     cardsDescription.classList.add('hidden');
     setTimeout(() => {
@@ -19,12 +16,9 @@ export const slider = () => {
   }
 
   const openCard = (event) => {
-    console.log(currentCard)
-    console.log(currentCard !== +event.target.id)
     if(+currentCard !== +event.target.id){
       
     const cardWidth = cards.offsetWidth;
-    console.log(1)
     currentCard = event.target.id;
     console.log(cardWidth)
     console.log(currentCard)
@@ -37,7 +31,6 @@ export const slider = () => {
   const changeLeftMargin = () => {
 
     const cardWidth = cards.offsetWidth;
-    console.log(cardWidth)
 
     cards.classList.remove('animate-margin');
     cards.style.marginLeft = `${-cardWidth * (currentCard)}px`;
