@@ -514,8 +514,12 @@ body {
 }
 
 .slider__cards{
+  width: 100%;
   display: flex;
-  transition: margin 0.5s ease-in-out;
+}
+
+.animate-margin{
+  transition: margin-left 0.5s ease-in-out;
 }
 
 .slider__card{
