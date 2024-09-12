@@ -9,6 +9,8 @@ export const slider = () => {
 
   const changeSliderDesc = (currentCard) => {
 
+    console.log('asdfs')
+
     cardsDescription.classList.add('hidden');
     setTimeout(() => {
       cardsDescription.textContent = `${memeInfo[currentCard]}`;
@@ -17,7 +19,10 @@ export const slider = () => {
   }
 
   const openCard = (event) => {
-
+    console.log(currentCard)
+    console.log(currentCard !== +event.target.id)
+    if(+currentCard !== +event.target.id){
+      
     const cardWidth = cards.offsetWidth;
     console.log(1)
     currentCard = event.target.id;
@@ -26,10 +31,11 @@ export const slider = () => {
     changeSliderDesc(currentCard)
     cards.classList.add('animate-margin');
     cards.style.marginLeft = `${-cardWidth * (currentCard)}px`;
+    } 
   }
 
   const changeLeftMargin = () => {
-    
+
     const cardWidth = cards.offsetWidth;
     console.log(cardWidth)
 
