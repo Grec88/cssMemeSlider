@@ -594,6 +594,21 @@ body {
   }
 }
 
+@media screen and (max-width: 550px) {
+
+  .slider__description{
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+
+  .slider__description{
+    font-size: 1.6rem;
+  }
+}
+
+
 
 
 
